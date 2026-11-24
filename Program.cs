@@ -31,14 +31,32 @@ namespace Session04Task
             // Write a method called PrintWelcomeMessage that takes no parameters and prints
             //"Welcome to the Library!".Call it from Main.
 
-            PrintWelcomeMessage();
+            //PrintWelcomeMessage();
 
 
             #endregion
+            #region Question 4
+            //Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
+            //"Clean Code"
+
+            string title = "Clean Code";
+            PrintBookTitle(title);
+
+            #endregion
         }
-        static void PrintWelcomeMessage()
+        #region Method Question 3
+        //static void PrintWelcomeMessage()
+        //{
+        //    Console.WriteLine("Welcome to the Library!");
+        //}
+        #endregion
+        #region Method Question 4
+        static void PrintBookTitle(string title)
         {
-            Console.WriteLine("Welcome to the Library!");
+            Console.WriteLine("Book Title: " +title);
+
         }
+        #endregion
+
     }
 }
