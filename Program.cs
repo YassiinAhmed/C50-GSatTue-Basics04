@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Drawing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Session04Task
 {
@@ -66,13 +67,24 @@ namespace Session04Task
             #region Question 7
             //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
             //Call it and print pages afterward. How is the result different from question 5 ?
-            int pages = 400;
+            //int pages = 400;
 
-            AddBonusPagesByRef(ref pages);
+            //AddBonusPagesByRef(ref pages);
 
-            Console.WriteLine(pages);
-            // استخدمنا ref 
-            //  Original Variableالميثود تقدر تعدل على ال
+            //Console.WriteLine(pages);
+            //// استخدمنا ref 
+            ////  Original Variableالميثود تقدر تعدل على ال
+            #endregion
+            #region Question 8
+            //Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+            //new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length afterward.
+            double[] prices = { 25.5, 40.0 };
+         
+            ReplaceArray(ref prices);
+
+            Console.WriteLine(prices.Length);
+
+
             #endregion
         }
         #region Method Question 3
@@ -101,9 +113,16 @@ namespace Session04Task
         //}
         #endregion
         #region Method Question 7
-        static void AddBonusPagesByRef(ref int pages)
+        //static void AddBonusPagesByRef(ref int pages)
+        //{
+        //    pages += 50;
+        //}
+
+        #endregion
+        #region Method Question 8
+        static void ReplaceArray(ref double[] prices)
         {
-            pages += 50;
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
 
         #endregion
