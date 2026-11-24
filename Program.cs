@@ -55,13 +55,24 @@ namespace Session04Task
             //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0].Call it
             //with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
             //see, and why?
-            double[] prices = { 25.5, 40.0 };
+            //double[] prices = { 25.5, 40.0 };
 
-            ApplyDiscount(prices);
+            //ApplyDiscount(prices);
 
-            Console.WriteLine(prices[0]);
-            //  reference type هنا النتيجه هتختلف عشان الاراي من نوع 
-            // Output Result =>     20.5
+            //Console.WriteLine(prices[0]);
+            ////  reference type هنا النتيجه هتختلف عشان الاراي من نوع 
+            //// Output Result =>     20.5
+            #endregion
+            #region Question 7
+            //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+            //Call it and print pages afterward. How is the result different from question 5 ?
+            int pages = 400;
+
+            AddBonusPagesByRef(ref pages);
+
+            Console.WriteLine(pages);
+            // استخدمنا ref 
+            //  Original Variableالميثود تقدر تعدل على ال
             #endregion
         }
         #region Method Question 3
@@ -84,10 +95,17 @@ namespace Session04Task
         //}
         #endregion
         #region Method Question 6
-        static void ApplyDiscount(double[] prices)
+        //static void ApplyDiscount(double[] prices)
+        //{
+        //    prices[0] -= 5;
+        //}
+        #endregion
+        #region Method Question 7
+        static void AddBonusPagesByRef(ref int pages)
         {
-            prices[0] -= 5;
+            pages += 50;
         }
+
         #endregion
     }
 }
