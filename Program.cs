@@ -39,8 +39,16 @@ namespace Session04Task
             //Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
             //"Clean Code"
 
-            string title = "Clean Code";
-            PrintBookTitle(title);
+            //string title = "Clean Code";
+            //PrintBookTitle(title);
+
+            #endregion
+            #region Question 5
+            //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+            //int pages = 400; and print pages afterward. What do you expect to see, and why?
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages); // مش هيتأثر عشان ده value type 
 
             #endregion
         }
@@ -51,10 +59,16 @@ namespace Session04Task
         //}
         #endregion
         #region Method Question 4
-        static void PrintBookTitle(string title)
-        {
-            Console.WriteLine("Book Title: " +title);
+        //static void PrintBookTitle(string title)
+        //{
+        //    Console.WriteLine("Book Title: " +title);
 
+        //}
+        #endregion
+        #region Method Question 5
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
         }
         #endregion
 
