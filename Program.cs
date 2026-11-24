@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Reflection;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Session04Task
@@ -78,11 +79,25 @@ namespace Session04Task
             #region Question 8
             //Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
             //new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length afterward.
-            double[] prices = { 25.5, 40.0 };
-         
-            ReplaceArray(ref prices);
+            //double[] prices = { 25.5, 40.0 };
 
-            Console.WriteLine(prices.Length);
+            //ReplaceArray(ref prices);
+
+            //Console.WriteLine(prices.Length);
+
+
+            #endregion
+            #region Question 9
+            //Write a method bool TryGetPrice(string title, out double price) that returns true and sets
+            //price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0. Call it and print the price if found
+            double price;
+
+            bool found = TryGetPrice("Clean Code", out price);
+
+            if (found)
+            
+                Console.WriteLine(price);
+            
 
 
             #endregion
@@ -120,11 +135,26 @@ namespace Session04Task
 
         #endregion
         #region Method Question 8
-        static void ReplaceArray(ref double[] prices)
-        {
-            prices = new double[] { 10.0, 12.5, 15.0 };
-        }
+        //static void ReplaceArray(ref double[] prices)
+        //{
+        //    prices = new double[] { 10.0, 12.5, 15.0 };
+        //}
 
+        #endregion
+        #region Method Question 9
+        static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
+        }
         #endregion
     }
 }
