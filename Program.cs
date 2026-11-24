@@ -110,7 +110,14 @@ namespace Session04Task
             #region Question 11
             //Using the PrintBookInfo method from the question above, call it by naming the
             //parameters, passing pages before title.
-            PrintBookInfo(title:"Clean Code",pages: 450);
+            //PrintBookInfo(title:"Clean Code",pages: 450);
+
+            #endregion
+            #region Question 12
+            //Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
+            // Call it with three book titles.
+            string[] titles = {"C# Basics", "Python", "Clean Code" };
+            PrintAllTitles(titles);
 
             #endregion
         }
@@ -175,9 +182,18 @@ namespace Session04Task
         //}
         #endregion
         #region Method Question 11
-        static void PrintBookInfo(string title, int pages = 300)
+        //static void PrintBookInfo(string title, int pages = 300)
+        //{
+        //    Console.WriteLine(title + " - " + pages);
+        //}
+        #endregion
+        #region Method Question 12
+        static void PrintAllTitles(params string[] titles)
         {
-            Console.WriteLine(title + " - " + pages);
+            foreach (string s in titles)
+            {
+                Console.WriteLine(s);
+            }
         }
         #endregion
     }
